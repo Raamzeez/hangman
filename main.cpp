@@ -128,7 +128,7 @@ int main()
     }
     if (win)
     {
-        cout << "Congratulations you won the game!" << endl;
+        cout << "Congratulations you won the game! The correct word was " << targetPhrase << endl;
     }
     else
     {
