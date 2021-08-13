@@ -78,6 +78,8 @@ int main()
             // }
             // else
             // {
+            for_each(targetPhrase.begin(), targetPhrase.end(), [](char &c)
+                     { c = ::tolower(c); });
             guessingText = generateGuessingText(targetPhrase);
             askForPhrase = false;
             // }
@@ -96,7 +98,7 @@ int main()
         }
         cout << stages[currentStageIndex] << endl;
         cout << guessingText << endl;
-        cout << "What letter do you want to guess? ";
+        cout << "What letter do you want to guess? (lowercase) ";
         cin >> letterGuessed;
         if (!cin.fail())
         {
